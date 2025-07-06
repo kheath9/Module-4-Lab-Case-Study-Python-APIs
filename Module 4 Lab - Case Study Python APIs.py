@@ -12,12 +12,8 @@ class Book(db.model):
  publisher = db.Column(db.String(80,) unique=False)
 
  def __repr__(self):
-     return f"{self.name} - {self.description}"
+     return f"{self.book_name} - {self.author} - {self.publisher}"
 
-
-@app.route('/')
-def index():
-    return 'Hello!'
 
 @app.route('/books')
 def getbooks():
